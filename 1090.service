@@ -1,0 +1,20 @@
+[Unit]
+Wants=network.target
+After=network.target
+
+[Service]
+EnvironmentFile=/usr/local/share/lbw-feed-adsbx/default
+EnvironmentFile=/etc/default/lbw-feed-adsbx
+SyslogIdentifier=lbw-feed-adsbx
+RuntimeDirectory=lbw-feed-adsbx
+User=lbw-feed-adsbx
+RuntimeDirectoryMode=0755
+ExecStart=/usr/local/share/lbw-feed-adsbx/readsb \
+ $NET_OPTIONS $SOURCE $TARGET --quiet --net-beast-reduce-interval $INTERVAL
+Type=simple
+Restart=on-failure
+RestartSec=30
+Nice=5
+
+[Install]
+WantedBy=default.target
