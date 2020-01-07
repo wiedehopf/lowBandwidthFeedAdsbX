@@ -1,5 +1,6 @@
 # lowBandwidthFeedAdsbX
-Feed ADS-B only to adsbexchange.com using minimal bandwidth.
+Feed ADS-B to adsbexchange.com using minimal bandwidth.
+MLAT feed not included.
 
 
 ## Installation
