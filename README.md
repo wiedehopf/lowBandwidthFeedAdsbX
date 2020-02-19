@@ -9,10 +9,10 @@ If you are only feeding FR24, then a reconfiguration is most likely required, th
  https://github.com/wiedehopf/adsb-scripts/wiki/Automatic-installation-for-dump1090-fa
 
 
-## Approximate bandwidth requirement
+## Approximate bandwidth requirement per month
 
-With the default interval of 2.5 seconds and an average of 10 aircraft in range of your receiver, the data used will be around 1 GB.
-For a more typical 50 aircraft in view (average, not peak), the data usage will be 5 GB.
+With the default interval of 2.5 seconds and an average of 10 aircraft in range of your receiver, the data used will be around 1 GB per month.
+For a more typical 50 aircraft in view (average, not peak), the data usage will be 5 GB per month.
 
 You can change that interval in the configuration file to further reduce data usage.
 
