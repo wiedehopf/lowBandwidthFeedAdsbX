@@ -1,5 +1,5 @@
 SOURCE="--net-connector localhost,30005,beast_in"
-TARGET="--net-connector feed.adsbexchange.com,30005,beast_reduce_out"
+TARGET="--net-connector feed1.adsbexchange.com,30004,beast_reduce_out,feed2.adsbexchange.com,64004"
 # longer interval means less data, adjust as necessary
 INTERVAL=2.5
 
