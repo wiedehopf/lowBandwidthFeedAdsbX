@@ -1,12 +1,32 @@
+# deprecated
+
+please use the main feed scripts located here: https://github.com/adsbxchange/adsb-exchange#ads-b-exchange-setup-scripts-airplane
+if you're already running this, run the uninstall.
+
+You can edit /etc/default/adsbexchange and change
+```
+REDUCE_INTERVAL="0.5"
+```
+to
+```
+REDUCE_INTERVAL="2.5"
+```
+or longer to reduce data usage.
+You might also want to disable MLAT:
+```
+sudo systemctl disable --now adsbexchange-mlat
+```
+
+
 # lowBandwidthFeedAdsbX
 Feed ADS-B to adsbexchange.com using minimal bandwidth.
 MLAT feed not included.
 
-This feed client requires dump1090 to be already running and offering beast data on port 30005.
+This feed client requires readsb or dump1090 to be already running and offering beast data on port 30005.
 If you are feeding FA for example, this is already the case.
 
 If you are only feeding FR24, then a reconfiguration is most likely required, this would take care of that:
- https://github.com/wiedehopf/adsb-scripts/wiki/Automatic-installation-for-dump1090-fa
+ https://github.com/wiedehopf/adsb-scripts/wiki/Automatic-installation-for-readsb
 
 
 ## Approximate bandwidth requirement per month
